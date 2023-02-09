@@ -1,0 +1,18 @@
+ctrl shift p
+python: select interpreter
+select venv env
+
+py -m venv env
+.\env\Scripts\activate
+
+
+pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org pip "PACKAGE"
+
+# this saves all the enviroment requirments
+pip freeze > info.txt
+
+
+# this re installs all the requirements.
+pip install -r info.txt
+
+git -c http.sslVerify=false push 

@@ -1,0 +1,35 @@
+{
+    "semi": false,
+    "tabWidth": 4,
+    "printWidth": 80,
+    "quoteProps": "as-needed",
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "arrowParens": "always",
+    "htmlWhitespaceSensitivity": "css",
+    "singleAttributePerLine": false,
+    "overrides": [
+        {
+            "files": "*.test.js",
+            "options": {
+                "semi": true
+            }
+        },
+        {
+            "files": ["*.html", "legacy/**/*.js", "*.js"],
+            "options": {
+                "tabWidth": 2,
+                "trailingComma": "es5",
+                "singleAttributePerLine": true
+            }
+        },
+        {
+            "files": ["*.py"],
+            "options": {
+                "tabWidth": 4,
+                "singleQuote": true
+            }
+        }
+    ]
+}

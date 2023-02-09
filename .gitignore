@@ -1,0 +1,23 @@
+dictionary.txt
+Mismatch_SN.csv
+selfmodules\__pycache__
+Mismatch_SN.csv
+NARG_UPDATED.csv
+pt_test_update.csv
+mod.csv
+selfmodules/__pycache__
+repair_results_internal_update.csv
+PT2 Test.xlsx
+\env
+key.json
+*.csv
+*.xlsx
+Build_Miner_On_Shelf.xlsx
+Deploy_Boards.xlsx
+NARG Repair Data.xlsx
+On_Shelf.xlsx
+Remove_Boards.xlsx
+Build_Miner_On_Shelf.xlsx
+hashboard_repair_result-update.py
+selfmodules/clean_df_update.py
+selfmodules/pt2_test_update.py
