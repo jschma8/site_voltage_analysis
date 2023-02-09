@@ -1,7 +1,8 @@
 import pandas as pd   
 from tqdm import tqdm
 import os
-
+import warnings
+warnings.simplefilter("ignore")
 
 
 
@@ -16,10 +17,11 @@ else:
 
 
 for file in file_list:
-
-    df = pd.read_excel(file, sheet_name='Sheet0')
+    filename = './files/' + file
+    df = pd.read_excel(filename, sheet_name='Sheet0')
+    print(file)
     column_name = df.at[1, 'Date (UTC+0:00)']
-
+    del filename
     if column_name not in out_df.columns:
         out_df[df.at[1, 'Date (UTC+0:00)']] = ''
 
@@ -41,7 +43,6 @@ for file in file_list:
         del df
         del column_name
         del x_list
-        res = input('next? ')
         out_df.sort_values(by=['x1', 'x2', 'x3'], inplace=True)
         out_df.drop(columns=['x0', 'x1', 'x2', 'x3'], inplace=True)
         out_df.to_csv('compiled.csv', index=False)
