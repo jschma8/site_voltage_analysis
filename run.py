@@ -24,7 +24,6 @@ for file in file_list:
     del filename
     if column_name not in out_df.columns:
         out_df[df.at[1, 'Date (UTC+0:00)']] = ''
-
         for i in tqdm(df.index):
 
             if df.at[i, 'IP'] not in out_df.values:
@@ -44,7 +43,6 @@ for file in file_list:
         del column_name
         del x_list
         out_df.sort_values(by=['x1', 'x2', 'x3'], inplace=True)
-        out_df.drop(columns=['x0', 'x1', 'x2', 'x3'], inplace=True)
         out_df.to_csv('compiled.csv', index=False)
 
     
