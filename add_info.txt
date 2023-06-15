@@ -3,6 +3,7 @@ python: select interpreter
 select venv env
 
 py -m venv env
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 .\env\Scripts\activate
 
 
